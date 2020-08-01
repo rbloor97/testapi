@@ -5,11 +5,8 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.decorators import api_view
 from rest_framework.parsers import JSONParser
-
-
-
-from api.models import Producto
-from .serializers import UserSerializer, Producto_Serializer
+from api.models import *
+from .serializers import *
 from rest_framework.views import *
 from rest_framework.response import Response
 from rest_framework import status
@@ -60,16 +57,34 @@ class UserListView(ObtainAuthToken):
             'email': user.email
         })
 
-    # queryset = Producto.objects.all()
-    # serializer_class = Producto_Serializer
-
-    # def post_details(request, Usuario_asignado):
-    #     posts = Producto.objects.get(Usuario_asignado=Usuario_asignado)
-
-
 class ProductoList(generics.ListCreateAPIView):
     queryset = Producto.objects.all()
     serializer_class = Producto_Serializer
+
+class Factura_ventaList(generics.ListCreateAPIView):
+    queryset = Factura_venta.objects.all()
+    serializer_class = Factura_venta_serializer
+
+class ProovedorList(generics.ListCreateAPIView):
+    queryset = Proovedor.objects.all()
+    serializer_class = Proovedor_serializer
+
+
+class ExistenciaList(generics.ListCreateAPIView):
+    queryset = Existencia.objects.all()
+    serializer_class = Existencia_serializer
+
+class CategoriaList(generics.ListCreateAPIView):
+    queryset = Categoria.objects.all()
+    serializer_class = Categoria_serializer
+
+class UserPercheroList(generics.ListCreateAPIView):
+    queryset = UserPerchero.objects.all()
+    serializer_class = UserPerchero_serializer
+
+
+
+
 
 # class Recibo_pList(generics.ListCreateAPIView):
 #     queryset = Recibo_p.objects.all()

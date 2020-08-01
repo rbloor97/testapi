@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
 
-from api.models import Producto
+from api.models import *
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -27,15 +27,40 @@ class UserSerializer(serializers.ModelSerializer):
             )
         ]
 
-# class Recibo_p_Serializer(serializers.ModelSerializer):
-#     class Meta:
-#         model=Recibo_p
-#         fields=("__all__")
+
 
 class Producto_Serializer(serializers.ModelSerializer):
     class Meta:
         model=Producto
         fields=("__all__")
+
+class UserPerchero_serializer(serializers.ModelSerializer):
+    class Meta:
+        model=UserPerchero
+        fields=("__all__")
+
+class Categoria_serializer(serializers.ModelSerializer):
+    class Meta:
+        model=Categoria
+        fields = ("__all__")
+
+class Existencia_serializer(serializers.ModelSerializer):
+    class Meta:
+        model=Existencia
+        field= ("__all__")
+
+class Proovedor_serializer(serializers.ModelSerializer):
+    class Meta:
+        model=Proovedor
+        field= ("__all__")
+
+class Factura_venta_serializer(serializers.ModelSerializer):
+    class Meta:
+        model= Factura_venta
+        field= ("__all__")
+
+
+
 
 # class Despacho_Serializer(serializers.ModelSerializer):
 #     class Meta:
