@@ -10,5 +10,11 @@ path('proovedor/', ProovedorList.as_view()),
 path('existencia/', ExistenciaList.as_view()),
 path('categoria/', CategoriaList.as_view()),
 path('perchero/', UserPercheroList.as_view()),
+path('entrada/', EntradaList.as_view()),
+path('usuario/', UsuarioList.as_view()),
+path('ubicacion/', UbicacionList.as_view()),
+path('perchado/', PerchadoList.as_view()),
+path('salida/', SalidaList.as_view()),
+
 
 ]

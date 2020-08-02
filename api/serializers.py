@@ -59,6 +59,30 @@ class Factura_venta_serializer(serializers.ModelSerializer):
         model= Factura_venta
         field= ("__all__")
 
+class Entrada_serializer(serializers.ModelSerializer):
+    class Meta:
+        model= Entrada
+        field= ("__all__")
+
+class Usuario_serializer(serializers.ModelSerializer):
+    class Meta:
+        model= Usuario
+        field= ("__all__")
+
+class Ubicacion_serializer(serializers.ModelSerializer):
+    class Meta:
+        model= Ubicacion
+        field= ("__all__")
+
+class Perchado_serializer(serializers.ModelSerializer):
+    class Meta:
+        model= Perchado
+        field= ("__all__")
+
+class Salida_serializer(serializers.ModelSerializer):
+    class Meta:
+        model= Salida
+        field= ("__all__")
 
 
 

@@ -82,6 +82,26 @@ class UserPercheroList(generics.ListCreateAPIView):
     queryset = UserPerchero.objects.all()
     serializer_class = UserPerchero_serializer
 
+class EntradaList(generics.ListCreateAPIView):
+    queryset = Entrada.objects.all()
+    serializer_class = Entrada_serializer
+
+class UsuarioList(generics.ListCreateAPIView):
+    queryset = Usuario.objects.all()
+    serializer_class = Usuario_serializer
+
+class UbicacionList(generics.ListCreateAPIView):
+    queryset = Ubicacion.objects.all()
+    serializer_class = Ubicacion_serializer
+
+class PerchadoList(generics.ListCreateAPIView):
+    queryset = Perchado.objects.all()
+    serializer_class = Perchado_serializer
+
+class SalidaList(generics.ListCreateAPIView):
+    queryset = Salida.objects.all()
+    serializer_class = Salida_serializer
+
 
 
 
