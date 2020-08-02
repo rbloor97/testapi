@@ -57,13 +57,16 @@ class UserListView(ObtainAuthToken):
             'email': user.email
         })
 
+
 class ProductoList(generics.ListCreateAPIView):
     queryset = Producto.objects.all()
     serializer_class = Producto_Serializer
 
+
 class Factura_ventaList(generics.ListCreateAPIView):
     queryset = Factura_venta.objects.all()
     serializer_class = Factura_venta_serializer
+
 
 class ProovedorList(generics.ListCreateAPIView):
     queryset = Proovedor.objects.all()
@@ -74,37 +77,35 @@ class ExistenciaList(generics.ListCreateAPIView):
     queryset = Existencia.objects.all()
     serializer_class = Existencia_serializer
 
+
 class CategoriaList(generics.ListCreateAPIView):
     queryset = Categoria.objects.all()
     serializer_class = Categoria_serializer
+
 
 class UserPercheroList(generics.ListCreateAPIView):
     queryset = UserPerchero.objects.all()
     serializer_class = UserPerchero_serializer
 
+
 class EntradaList(generics.ListCreateAPIView):
     queryset = Entrada.objects.all()
     serializer_class = Entrada_serializer
 
-class UsuarioList(generics.ListCreateAPIView):
-    queryset = Usuario.objects.all()
-    serializer_class = Usuario_serializer
 
-class UbicacionList(generics.ListCreateAPIView):
-    queryset = Ubicacion.objects.all()
-    serializer_class = Ubicacion_serializer
+class UbicationList(generics.ListCreateAPIView):
+    queryset = Ubication.objects.all()
+    serializer_class = Ubication_serializer
+
 
 class PerchadoList(generics.ListCreateAPIView):
     queryset = Perchado.objects.all()
     serializer_class = Perchado_serializer
 
+
 class SalidaList(generics.ListCreateAPIView):
     queryset = Salida.objects.all()
     serializer_class = Salida_serializer
-
-
-
-
 
 # class Recibo_pList(generics.ListCreateAPIView):
 #     queryset = Recibo_p.objects.all()

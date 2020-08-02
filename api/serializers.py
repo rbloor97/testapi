@@ -28,63 +28,64 @@ class UserSerializer(serializers.ModelSerializer):
         ]
 
 
-
 class Producto_Serializer(serializers.ModelSerializer):
     class Meta:
-        model=Producto
-        fields=("__all__")
+        model = Producto
+        fields = ("__all__")
+
 
 class UserPerchero_serializer(serializers.ModelSerializer):
     class Meta:
-        model=UserPerchero
-        fields=("__all__")
+        model = UserPerchero
+        fields = ("__all__")
+
 
 class Categoria_serializer(serializers.ModelSerializer):
     class Meta:
-        model=Categoria
+        model = Categoria
         fields = ("__all__")
+
 
 class Existencia_serializer(serializers.ModelSerializer):
     class Meta:
-        model=Existencia
-        field= ("__all__")
+        model = Existencia
+        field = ("__all__")
+
 
 class Proovedor_serializer(serializers.ModelSerializer):
     class Meta:
-        model=Proovedor
-        field= ("__all__")
+        model = Proovedor
+        field = ("__all__")
+
 
 class Factura_venta_serializer(serializers.ModelSerializer):
     class Meta:
-        model= Factura_venta
-        field= ("__all__")
+        model = Factura_venta
+        field = ("__all__")
+
 
 class Entrada_serializer(serializers.ModelSerializer):
     class Meta:
-        model= Entrada
-        field= ("__all__")
+        model = Entrada
+        field = ("__all__")
 
-class Usuario_serializer(serializers.ModelSerializer):
-    class Meta:
-        model= Usuario
-        field= ("__all__")
 
-class Ubicacion_serializer(serializers.ModelSerializer):
+class Ubication_serializer(serializers.ModelSerializer):
     class Meta:
-        model= Ubicacion
-        field= ("__all__")
+        model = Ubication
+        field = ("__all__")
+
 
 class Perchado_serializer(serializers.ModelSerializer):
     class Meta:
-        model= Perchado
-        field= ("__all__")
+        model = Perchado
+        field = ("__all__")
+
 
 class Salida_serializer(serializers.ModelSerializer):
     class Meta:
-        model= Salida
-        field= ("__all__")
-
-
+        model = Salida
+        field = ("__all__")
 
 # class Despacho_Serializer(serializers.ModelSerializer):
 #     class Meta:
