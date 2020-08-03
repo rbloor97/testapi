@@ -49,43 +49,43 @@ class Categoria_serializer(serializers.ModelSerializer):
 class Existencia_serializer(serializers.ModelSerializer):
     class Meta:
         model = Existencia
-        field = ("__all__")
+        fields = ("__all__")
 
 
 class Proovedor_serializer(serializers.ModelSerializer):
     class Meta:
         model = Proovedor
-        field = ("__all__")
+        fields = ("__all__")
 
 
 class Factura_venta_serializer(serializers.ModelSerializer):
     class Meta:
         model = Factura_venta
-        field = ("__all__")
+        fields = ("__all__")
 
 
 class Entrada_serializer(serializers.ModelSerializer):
     class Meta:
         model = Entrada
-        field = ("__all__")
+        fields = ("__all__")
 
 
 class Ubication_serializer(serializers.ModelSerializer):
     class Meta:
         model = Ubication
-        field = ("__all__")
+        fields = ("__all__")
 
 
 class Perchado_serializer(serializers.ModelSerializer):
     class Meta:
         model = Perchado
-        field = ("__all__")
+        fields = ("__all__")
 
 
 class Salida_serializer(serializers.ModelSerializer):
     class Meta:
         model = Salida
-        field = ("__all__")
+        fields = ("__all__")
 
 # class Despacho_Serializer(serializers.ModelSerializer):
 #     class Meta:
