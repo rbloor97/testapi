@@ -12,7 +12,7 @@ class UserPerchero(models.Model):
 
 class Entrada(models.Model):
     Fecha = models.DateField()
-    UserPerchero = models.ForeignKey(UserPerchero, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    UserPerchero = models.ForeignKey(UserPerchero, on_delete=models.CASCADE, default=0, blank=True, null=True)
 
 
 class Categoria(models.Model):
@@ -65,10 +65,10 @@ class Ubication(models.Model):
 
 class Perchado(models.Model):
     fecha = models.DateField(default=None)
-    ubication = models.ForeignKey(Ubication, on_delete=models.CASCADE, default = None,blank=True,null=True)
+    ubication = models.ForeignKey(Ubication, on_delete=models.CASCADE, default = 0,blank=True,null=True)
     UserPerchero = models.ForeignKey(UserPerchero, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
 
 class Salida(models.Model):
     fecha= models.DateField(default=None)
-    UserPerchero = models.ForeignKey(UserPerchero, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    UserPerchero = models.ForeignKey(UserPerchero, on_delete=models.CASCADE, default=0, blank=True, null=True)

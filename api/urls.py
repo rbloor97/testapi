@@ -1,18 +1,24 @@
-from django.urls import path
+from django.urls import path,include
+from rest_framework import routers
+
+from api import views
 from .views import *
 
 app_name = 'api'
-urlpatterns = [
+router=routers.DefaultRouter()
      # path('despacho/', DespachoList.as_view()),
-        path('producto/', ProductoList.as_view()),
-        path('factura/', Factura_ventaList.as_view()),
-path('proovedor/', ProovedorList.as_view()),
-path('categoria/', CategoriaList.as_view()),
-path('perchero/', UserPercheroList.as_view()),
-path('entrada/', EntradaList.as_view()),
-path('ubicacion/', UbicationList.as_view()),
-path('perchado/', PerchadoList.as_view()),
-path('salida/', SalidaList.as_view()),
+router.register(r'producto', views.ProductoList),
+router.register(r'factura', views.Factura_ventaList),
+router.register(r'proovedor', views.ProovedorList),
+router.register(r'categoria', views.CategoriaList),
+router.register(r'perchero', views.UserPercheroList),
+router.register(r'entrada', views.EntradaList),
+router.register(r'ubicacion', views.UbicationList),
+router.register(r'perchado', views.PerchadoList),
+router.register(r'salida', views.SalidaList)
 
 
+urlpatterns = [
+    path('', include(router.urls)),
 ]
+

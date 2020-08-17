@@ -58,49 +58,58 @@ class UserListView(ObtainAuthToken):
         })
 
 
-class ProductoList(generics.ListCreateAPIView):
+class ProductoList(viewsets.ModelViewSet):
+    lookup_field = 'id'
     queryset = Producto.objects.all()
     serializer_class = Producto_Serializer
 
 
-class Factura_ventaList(generics.ListCreateAPIView):
+class Factura_ventaList(viewsets.ModelViewSet):
+    lookup_field = 'id'
     queryset = Factura_venta.objects.all()
     serializer_class = Factura_venta_serializer
 
 
-class ProovedorList(generics.ListCreateAPIView):
+class ProovedorList(viewsets.ModelViewSet):
+    lookup_field = 'id'
     queryset = Proovedor.objects.all()
     serializer_class = Proovedor_serializer
 
 
 
 
-class CategoriaList(generics.ListCreateAPIView):
+class CategoriaList(viewsets.ModelViewSet):
+    lookup_field = 'id'
     queryset = Categoria.objects.all()
     serializer_class = Categoria_serializer
 
 
-class UserPercheroList(generics.ListCreateAPIView):
+class UserPercheroList(viewsets.ModelViewSet):
+    lookup_field = 'id'
     queryset = UserPerchero.objects.all()
     serializer_class = UserPerchero_serializer
 
 
-class EntradaList(generics.ListCreateAPIView):
+class EntradaList(viewsets.ModelViewSet):
+    lookup_field = 'UserPerchero'
     queryset = Entrada.objects.all()
     serializer_class = Entrada_serializer
 
 
-class UbicationList(generics.ListCreateAPIView):
+class UbicationList(viewsets.ModelViewSet):
+    lookup_field = 'id'
     queryset = Ubication.objects.all()
     serializer_class = Ubication_serializer
 
 
-class PerchadoList(generics.ListCreateAPIView):
+class PerchadoList(viewsets.ModelViewSet):
+    lookup_field = 'UserPerchero'
     queryset = Perchado.objects.all()
     serializer_class = Perchado_serializer
 
 
-class SalidaList(generics.ListCreateAPIView):
+class SalidaList(viewsets.ModelViewSet):
+    lookup_field = 'UserPerchero'
     queryset = Salida.objects.all()
     serializer_class = Salida_serializer
 
