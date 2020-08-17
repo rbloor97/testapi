@@ -46,10 +46,7 @@ class Categoria_serializer(serializers.ModelSerializer):
         fields = ("__all__")
 
 
-class Existencia_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = Existencia
-        fields = ("__all__")
+
 
 
 class Proovedor_serializer(serializers.ModelSerializer):

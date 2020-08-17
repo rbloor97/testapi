@@ -73,9 +73,6 @@ class ProovedorList(generics.ListCreateAPIView):
     serializer_class = Proovedor_serializer
 
 
-class ExistenciaList(generics.ListCreateAPIView):
-    queryset = Existencia.objects.all()
-    serializer_class = Existencia_serializer
 
 
 class CategoriaList(generics.ListCreateAPIView):

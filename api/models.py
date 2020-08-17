@@ -18,14 +18,14 @@ class Entrada(models.Model):
 class Categoria(models.Model):
     Nombre = models.CharField(max_length=100, blank=True)
     Descripcion = models.CharField(max_length=300, blank=True)
+    UnidadesExistencia = models.IntegerField(default=None, blank=True, null=True)
+
 
     def __str__(self):
         return self.Nombre
 
 
-class Existencia(models.Model):
-    UnidadesExistencia = models.IntegerField(blank=True)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, default=None, blank=True, null=True)
+
 
 
 class Proovedor(models.Model):
