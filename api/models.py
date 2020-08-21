@@ -25,9 +25,6 @@ class Categoria(models.Model):
         return self.Nombre
 
 
-
-
-
 class Proovedor(models.Model):
     Nombre = models.CharField(max_length=100, blank=True)
     direccion = models.CharField(max_length=30, blank=True)
@@ -43,16 +40,6 @@ class Factura_venta(models.Model):
 
     def __str__(self):
         return self.Num_factura
-
-
-class Producto(models.Model):
-    Estado = models.CharField(max_length=10, blank=True)
-    Codigo_barra = models.CharField(max_length=30, blank=True)
-    Nombre = models.CharField(max_length=100, blank=True)
-    Precio = models.CharField(max_length=30, blank=True)
-    Proovedor = models.ForeignKey(Proovedor, on_delete=models.CASCADE, default=None, blank=True, null=True)
-    factura_venta = models.ForeignKey(Factura_venta, on_delete=models.CASCADE, default=None, blank=True, null=True)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
 
 class Ubication(models.Model):
@@ -72,3 +59,20 @@ class Perchado(models.Model):
 class Salida(models.Model):
     fecha= models.DateField(default=None)
     UserPerchero = models.ForeignKey(UserPerchero, on_delete=models.CASCADE, default=0, blank=True, null=True)
+
+
+class Producto(models.Model):
+    Estado = models.CharField(max_length=10, blank=True)
+    Codigo_barra = models.CharField(max_length=30, blank=True)
+    Nombre = models.CharField(max_length=100, blank=True)
+    Precio = models.CharField(max_length=30, blank=True)
+    Proovedor = models.ForeignKey(Proovedor, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    factura_venta = models.ForeignKey(Factura_venta, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    entrega = models.ForeignKey(Entrada, on_delete=models.CASCADE, default=0, blank=True, null=True)
+    perchado = models.ForeignKey(Perchado, on_delete=models.CASCADE, default=0, blank=True, null=True)
+    salida = models.ForeignKey(Salida, on_delete=models.CASCADE, default=0, blank=True, null=True)
+
+
+
+
