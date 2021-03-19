@@ -26,7 +26,7 @@ django-rest-auth==0.9.5
 django-rest-framework-mongoengine==3.3.1
 django-settings-json==1.0.2
 django-widget-tweaks==1.4.3
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 djongo==1.2.33
 et-xmlfile==1.0.1
