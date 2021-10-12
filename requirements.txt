@@ -46,7 +46,7 @@ mccabe==0.6.1
 mongoengine==0.18.2
 numpy==1.16.4
 odfpy==1.4.0
-opencv-contrib-python==4.1.2.30
+opencv-contrib-python==4.2.0.32
 openpyxl==2.5.12
 packaging==19.0
 pandas==0.25.0
