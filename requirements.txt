@@ -65,7 +65,7 @@ pyparsing==2.4.0
 python-dateutil==2.8.0
 pytz==2019.1
 PyYAML==5.1.2
-reportlab==3.5.12
+reportlab==3.5.55
 six==1.15.0
 sqlparse==0.2.4
 tablib==0.13.0
